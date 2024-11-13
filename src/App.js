@@ -2,7 +2,10 @@ import React, { useState, useEffect} from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import axios from 'axios';
 import { UserProvider } from './UserContext';
-import Header from './components/Header';
+import Header from './Components/Header';
+import Contact from './pages/Contact/Contact';
+import Gallery from './pages/Gallery/Gallery';
+import About from './pages/About/About';
 import Home from './pages/Home/Home';
 
 
@@ -71,23 +74,9 @@ function MainContent({ adminHash }) {
           {showHeader && <Header adminHash={adminHash} />}  {/* Pass adminHash to Header */}
           <Routes>
               <Route path="/" element={<Home />} />
-              {/* <Route path="/login" element={<Login />} />
-              <Route path="/browse" element={<Browse />} />
-              <Route path="/register-as" element={<RegisterAs />} />
-              <Route path="/register/internal" element={<RegisterInternal />} />
-              <Route path="/register/external" element={<RegisterExternal />} />
-              <Route path="/register/internal/congratulation" element={<Congratulation />} />
-              <Route path="/register/external/congratulation" element={<Congratulation />} />
-              <Route path="/projects/:projectId" element={<ProjectDetail />} />
-              <Route path="/projects/download/:projectId" element={<ProjectDetailDownload />} />
-              <Route path={`/admin/${adminHash}`} element={<AdminDashboard />} /> 
-              <Route path="/profile" element={<Profile />} />
-              <Route path="/myProject" element={<MyProject />} />
-              <Route path="/profile/edit-profile" element={<EditProfile />} />
-              <Route path="/profile/:username" element={<PublicProfile />} />
-              <Route path="/my-requests" element={<MyRequests />} />
-              <Route path="/requests/:requestId" element={<RequestDetail />} />
-              <Route path="*" element={<NotFound />} />  404 route */}
+              <Route path="/Gallery" element={<Gallery />} />
+              <Route path="/Contact" element={<Contact />} />
+              <Route path="/About" element={<About />} />
           </Routes>
       </>
   );

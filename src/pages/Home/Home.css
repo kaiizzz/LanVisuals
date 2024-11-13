@@ -1,5 +1,7 @@
+
+
 .main-content {
-    background-color: #bdb9c0;
+    /* background-color: #bdb9c0; */
     height: 100vh;
     width: 100vw;
     justify-content: center;
@@ -7,23 +9,23 @@
 }
 
 .background-image {
-    /* background-image: url('/image/LogoBlack.PNG'); */
-    /* background-size: contain;          
-    background-position: center;     
-    background-repeat: no-repeat;   */
-    width: 1000px;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    margin-left: 60%;
-}
-
+    background-image: url('lili.png');
+    background-size: contain; /* Adjust depending on how you want the image sized (contain, cover, etc.) */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    position: absolute; /* Choose 'absolute' or 'relative' based on your needs */
+    width: 100%; /* Full width of the container or screen */
+    height: 100vh; /* Full height of the viewport */
+    top: 30%; /* Align at the top */
+    left: -25%; /* Align at the left */
+    z-index: -1; /* Ensure the image is behind other content */
+  }
 .overlay {
     
     width: 100%;
     height: 100%;
     position: absolute;
-    top: 10%;
+    top: 1%;
     left: 0;
     justify-content: center;
     align-items: center;
@@ -37,11 +39,12 @@
     color: white;
     justify-content: center;
     align-items: center;
-    padding: 10%;
+    padding: 5%;
+    font-family: 'Myriad Pro';
     /* background-color: rgba(0, 0, 0, 0.5); */
 }
 .overlay-colour {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0);
     width: 120%;
     height: 120%;
     position: absolute;
@@ -55,48 +58,147 @@
     font-weight: bold;
     color: white;
     
+    
 }
 
 .home-text2 {
     font-size: 30px;
     font-weight: bold;
-    color: rgb(199, 90, 90);
+    color: #6ACAD7;
     margin-top: -3%;
+    
 }
 
 .home-text3 {
-    border-left: 2px solid white;
-    border-right: 2px solid white;
+    border-left: 2px solid #6ACAD7;
+    border-right: 2px solid #6ACAD7;
     padding: 10px;
+    
+    font-size: 150%;
+}
+
+.home-text31 {
+    border-left: 2px solid #6ACAD7;
+    border-right: 2px solid #6ACAD7;
+    background-color: rgba(59, 59, 59, 0.815);
+    padding: 20px;
+    border-radius: 5px;
+
 }
 
 /* Style for the container */
 .home-text4 {
-    display: flex; /* Use flexbox to align items horizontally */
-    justify-content: space-between; /* Place pairs on opposite sides */
+    display: flex;
+    justify-content: center; /* Place pairs on opposite sides */
+    align-items: center; /* Center items vertically */
     margin-top: 5%;
-    width: 40%; /* Ensure the container spans the full width */
+    width: 100vw; /* Ensure the container spans the full width */
+    height: 5vh;
+    background-color: rgba(129, 129, 129, 0);
+    padding: 10px;
+    border-radius: 5px;
+
+
+    
+    
 }
 
-/* Style for paragraphs */
-.pair p {
-    font-size: 20px;
-    margin-right: 10px; /* Space between paragraph and link */
-    color: #ffffff;
-}
 
 /* Style for the links (buttons) */
 .home-button {
+
     padding: 10px 20px;
     text-decoration: none;
     color: white;
     border-radius: 10px;
     font-size: 25px;
     transition: background-color 1s ease;
+    overflow: hidden; /* Ensures the pseudo-element doesn't overflow */
+    z-index: 1; /* Ensure the button is above the pseudo-element */
+    border: 2px solid transparent;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 10%;
+    
+    
 }
+
 
 /* Hover effect for buttons */
 .home-button:hover {
-    background-color: #009eb3c2;
-    
+    background-color: #6ACAD7;
+    animation: draw-border 0.2s forwards;
+    /* animation: draw-border 1.5s forwards; */
 }
+
+.home-button {
+    animation: remove-border 0.2s forwards;
+}
+
+/* Animation for drawing the border clockwise */
+@keyframes draw-border {
+    0% {
+        border: 2px solid transparent; 
+        /* transform: rotate(0deg); */
+    }
+    25% {
+        border-left: 2px solid white;
+        border-top: 2px solid transparent;
+        border-right: 2px solid transparent;
+        border-bottom: 2px solid transparent;
+        /* transform: rotate(90deg); */
+    }
+    50% {
+        border-left: 2px solid white;
+        border-top: 2px solid white;
+        border-right: 2px solid transparent;
+        border-bottom: 2px solid transparent;
+        /* transform: rotate(180deg); */
+    }
+    75% {
+        border-left: 2px solid white;
+        border-top: 2px solid white;
+        border-right: 2px solid white;
+        border-bottom: 2px solid transparent;
+        /* transform: rotate(270deg); */
+    }
+    100% {
+        border: 2px solid white;
+        /* transform: rotate(360deg); */
+    }
+}
+
+/* Animation for removing the border anticlockwise */
+@keyframes remove-border {
+    0% {
+        border : 2px solid white;
+        /* transform: rotate(360deg); */
+    }
+    25% {
+        
+        border-left: 2px solid white;
+        border-right: 2px solid white;
+        border-top: 2px solid white;
+        border-bottom: 2px solid transparent;
+        /* transform: rotate(270deg); */
+    }
+    50% {
+        border-left: 2px solid white;
+        border-right: 2px solid transparent;
+        border-top: 2px solid white;
+        border-bottom: 2px solid transparent;
+        /* transform: rotate(180deg); */
+    }
+    75% {
+        border-left: 2px solid white;
+        border-right: 2px solid transparent;
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid transparent;
+        /* transform: rotate(90deg); */
+    }
+    100% {
+        border: 2px solid transparent;
+        /* transform: rotate(0deg); */
+    }
+}
+
