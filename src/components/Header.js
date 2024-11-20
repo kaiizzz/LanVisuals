@@ -43,21 +43,21 @@ function Header({ adminHash }) {
 
     return (
         <header className='header'>
+            
+            <div className="header-logo">
+                        <img src="/image/LogoBlack.PNG" alt="Logo" style={{ width: '5%', height: '5%' }} />
+                </div>
             <div className="header-content">
-                <div className="header-logo">
-                    {/* <Link to="/">
-                        <img src={logoSrc} alt="Logo" />
-                    </Link> */}
-                    {/* <img src="/image/LogoBlack.PNG" alt="Logo" style={{ width: '100%', height: '100%' }} /> */}
-                </div>
-                <div className="header-title">
-                    {/* <h1 className={titleClass}>LanVisuals</h1> */}
-                </div>
+                
                 <div className="header-buttons">
                     <Link to="/" className="header-button">Home</Link>
+                    
                     <Link to="/Gallery" className="header-button">Gallery</Link>
+                    
                     <Link to="/About" className="header-button">About</Link>
+                    
                     <Link to="/Contact" className="header-button">Contact</Link>
+                    
                 </div>
             </div>
         </header>
