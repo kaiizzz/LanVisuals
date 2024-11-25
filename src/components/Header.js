@@ -41,6 +41,14 @@ function Header({ adminHash }) {
         navigate('/'); 
     };
 
+    // Scroll to the top function
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
+
     return (
         <header className='header'>
             
@@ -50,13 +58,13 @@ function Header({ adminHash }) {
             <div className="header-content">
                 
                 <div className="header-buttons">
-                    <Link to="/" className="header-button">Home</Link>
+                    <Link to="/" className="header-button" onClick={scrollToTop}>Home</Link>
                     
-                    <Link to="/Gallery" className="header-button">Gallery</Link>
+                    <Link to="/Gallery" className="header-button" onClick={scrollToTop}>Gallery</Link>
                     
-                    <Link to="/About" className="header-button">About</Link>
+                    <Link to="/About" className="header-button" onClick={scrollToTop}>About</Link>
                     
-                    <Link to="/Contact" className="header-button">Contact</Link>
+                    <Link to="/Contact" className="header-button" onClick={scrollToTop}>Contact</Link>
                     
                 </div>
             </div>

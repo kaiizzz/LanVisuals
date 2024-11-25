@@ -6,7 +6,7 @@
     height: 100vh;
     width: 50%;
     padding-top: 1%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #3f7a81;
     margin-left: 25%;
 
 }
@@ -15,7 +15,7 @@
     color: white;
     padding: 10%;
     font-family: 'Myriad Pro';
-    font-size: 30px;
+    font-size: 35px;
 }
 
 .about-text {
@@ -26,7 +26,7 @@
 }
 
 .about-bg {
-    background-image: url('3.jpg');
+    background-color: #3f7a81;
     background-repeat: no-repeat;
     background-size: cover;
     /* margin: -1% -1% -1% -1%; */
