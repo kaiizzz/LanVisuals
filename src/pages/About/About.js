@@ -10,10 +10,12 @@ function About() {
     useEffect(() => {
         // Disable scrolling when the Home page is mounted
         document.body.style.overflow = 'hidden';
+        
     
         // Re-enable scrolling when the Home page is unmounted
         return () => {
-          document.body.style.overflow = '';
+          document.body.style.overflow = 'auto';
+          
         };
       }, []);
 

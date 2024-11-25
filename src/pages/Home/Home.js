@@ -42,6 +42,7 @@ function Home() {
           document.body.style.overflow = '';
         };
       }, []);
+    
 
     return (
         //<div className="home-container">

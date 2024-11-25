@@ -1,33 +1,42 @@
 .about-container {
-    justify-content: center;
-    align-items: center;
+    display: flex; /* Enable flexbox for alignment */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
     color: white;
-    font-family: 'Myriad Pro';
-    height: 100vh;
-    width: 50%;
-    padding-top: 1%;
+    font-family: 'Myriad Pro', sans-serif; /* Ensure fallback font */
+    height: 100vh; /* Full viewport height */
+    width: 100%; /* Ensure full width */
+    padding: 5%; /* Reduce padding for smaller screens */
     background-color: #3f7a81;
-    margin-left: 25%;
-
+    margin: 0; /* Remove margin to avoid clipping on small screens */
+    box-sizing: border-box; /* Include padding/border in width/height */
+    overflow: hidden; /* Prevent overflow */
 }
 
 .about-content {
     color: white;
-    padding: 10%;
-    font-family: 'Myriad Pro';
-    font-size: 35px;
+    padding: 3%; /* Adjust padding for smaller screens */
+    font-family: 'Myriad Pro', sans-serif;
+    font-size: 1rem; /* Use rem for responsive scaling */
+    text-align: center; /* Center text for better mobile view */
+    max-width: 800px; /* Constrain content width for large screens */
+    box-sizing: border-box; /* Prevent unwanted overflow */
 }
 
 .about-text {
-    font-size: 20px;
+    font-size: 1rem; /* Consistent font sizing */
     color: white;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding: 2%; /* Adjust for better spacing */
+    line-height: 1.5; /* Improve readability */
+    text-align: justify; /* Ensure better text flow */
 }
 
 .about-bg {
     background-color: #3f7a81;
     background-repeat: no-repeat;
     background-size: cover;
-    /* margin: -1% -1% -1% -1%; */
+    width: 100%; /* Ensure it fits the container */
+    height: 100%; /* Cover full height */
+    margin: 0; /* Remove negative margins */
 }

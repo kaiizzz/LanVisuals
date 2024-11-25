@@ -1,5 +1,3 @@
-
-
 .main-content {
     /* background-color: #bdb9c0; */
     height: 100vh;
@@ -25,7 +23,7 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    top: 1%;
+    top: 2vh;
     left: 0;
     justify-content: center;
     align-items: center;
@@ -43,15 +41,7 @@
     font-family: 'Myriad Pro';
     /* background-color: rgba(0, 0, 0, 0.5); */
 }
-.overlay-colour {
-    background-color: rgba(255, 255, 255, 0);
-    width: 120%;
-    height: 120%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-}
+
 
 .home-text1 {
     font-size: 100px;
@@ -88,15 +78,17 @@
 
 /* Style for the container */
 .home-text4 {
-    display: flex;
+    display: flex; /* Display the pairs in a row */
     justify-content: center; /* Place pairs on opposite sides */
     align-items: center; /* Center items vertically */
     margin-top: 5%;
-    width: 100vw; /* Ensure the container spans the full width */
+    width: 100%; /* Ensure the container spans the full width */
     height: 5vh;
-    background-color: rgba(129, 129, 129, 0);
-    padding: 10px;
+    background-color: rgba(114, 114, 114, 0.815);
+    padding: 1%;
     border-radius: 5px;
+    font-size: 150%;
+
 
 
     
@@ -111,14 +103,14 @@
     text-decoration: none;
     color: white;
     border-radius: 10px;
-    font-size: 25px;
+    font-size: 100%;
     transition: background-color 1s ease;
     overflow: hidden; /* Ensures the pseudo-element doesn't overflow */
     z-index: 1; /* Ensure the button is above the pseudo-element */
     border: 2px solid transparent;
     margin-left: 5%;
     margin-right: 5%;
-    width: 10%;
+    width: 50%;
     
     
 }

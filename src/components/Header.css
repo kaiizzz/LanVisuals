@@ -1,60 +1,94 @@
+/* General styling for the header */
 .header {
-    /* background-color: rgb(0, 192, 199); */
     color: white;
     z-index: 10000;
     position: fixed;
+    top: 0; /* Ensure the header stays at the top */
     width: 100%;
-   
+    display: flex;
+    flex-direction: column; /* Stack items vertically if needed */
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(22, 22, 22); /* Base header background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
 }
 
+/* Header logo styling */
 .header-logo {
-    /* background-color: rgb(0, 192, 199); */
     color: white;
-    background-color: #58a9b3;
-    width: 101%;
-    padding-top: 1%;
-
-    margin-top: -1%;
+    background-color: #58a9b3; /* Accent color */
+    width: 100%;
+    padding: 10px 0; /* Consistent padding */
+    margin: 0; /* Remove margin for seamless layout */
+    text-align: center;
+    font-size: 1.5rem; /* Adjust for visibility */
 }
 
-
+/* Header content area */
 .header-content {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px 0;
     background-color: rgb(22, 22, 22);
-    padding-right: 12%;
-    padding-left: 12%;
-    padding-top: 0.5%;
-    
-    
-
+    width: 100%;
+    flex-wrap: wrap; /* Wrap content on smaller screens */
+    gap: 15px; /* Add spacing between elements */
 }
 
+/* Header button styling */
 .header-button {
-    display: inline-block;
     z-index: 10;
-    /* background-color: rgb(0, 192, 199); */
     color: rgb(255, 255, 255);
-    border: none;
-    padding: 10px 50px;
+    background-color: transparent; /* Base color for hover effect */
+    border: 2px solid white; /* Add border for visual clarity */
+    padding: 10px 20px; /* Adjust for better clickability */
+    margin: 0 15px; /* Spacing between buttons */
     text-align: center;
     text-decoration: none;
-    /* display: inline-block; */
-    font-size: 16px;
+    font-size: 1rem; /* Relative font size */
     cursor: pointer;
     border-radius: 5px;
-    transition: background-color 1s ease;
-    overflow: hidden; /* Ensures the pseudo-element doesn't overflow */
-    
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow: hidden; /* Prevents overflow issues */
 }
 
+/* Hover effect for buttons */
 .header-button:hover {
     background-color: #6ACAD7;
     color: white;
-    height: auto;
-    overflow: hidden; /* Ensures the pseudo-element doesn't overflow */
 }
 
+/* Responsive design for smaller devices */
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 0;
+        flex-direction: column; /* Stack items vertically */
+    }
 
+    .header-logo {
+        font-size: 1.2rem; /* Slightly smaller logo text */
+    }
 
+    .header-content {
+        flex-direction: column; /* Stack content vertically */
+        gap: 10px; /* Reduce spacing */
+    }
+
+    .header-button {
+        width: 80%; /* Buttons take up more width */
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+}
+
+/* Responsive design for extra small devices */
+@media (max-width: 480px) {
+    .header-logo {
+        font-size: 1rem;
+    }
+
+    .header-button {
+        font-size: 0.8rem;
+        padding: 8px 15px;
+    }
+}
