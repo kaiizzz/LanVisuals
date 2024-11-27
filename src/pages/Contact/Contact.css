@@ -98,3 +98,8 @@
     text-align: center; /* Center-align for uniformity */
     margin: 10px;
 }
+
+.thank-you-message {
+    color: black;
+    padding: 10px;
+}

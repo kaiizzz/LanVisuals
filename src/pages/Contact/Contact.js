@@ -83,8 +83,8 @@ function Contact() {
                     </div>
                     {isSubmitted ? (
                         <div className="thank-you-message">
-                            <h2>Thank you for your message!</h2>
-                            <p>We’ll get back to you as soon as possible.</p>
+                            <h2 style={{color:'black'}}>Thank you for your message!</h2>
+                            <p style={{color:'black'}}>We’ll get back to you as soon as possible.</p>
                         </div>
                     ) : (
                         <form className="contact-form" onSubmit={handleSubmit}>
