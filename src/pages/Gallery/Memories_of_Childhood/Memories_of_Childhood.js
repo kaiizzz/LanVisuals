@@ -47,6 +47,17 @@ function Memories_of_Childhood() {
                     <Link to="/Gallery" style={{textDecoration : "none", color : 'white'}}>← Back to Gallery</Link>
                 </button>
                 <h1>Memories of Childhood</h1>
+                <p className='intro'>
+                    <hr/>
+                    <br/>
+                    
+                    My photographic series Memories of Childhood is a recollection of a most beautiful time in my life, and as time passes, those memories become clearer and more engrained in my mind. The photos were inspired by memories of colourful trees, mountains in autumn, narcissus flowers in winter, the bamboo forest in front of my uncle's house, and my childhood friends. To make these images, I have used child models aged 5 to 15 to capture these memories, all dressed in Chinese style clothing such as QiPao and theatrical costumes representing Chinese culture and tradition and aligning with my traditional aesthetic.
+
+                    
+                    <br/>
+                    <br/>
+                    <hr/>
+                </p>
 
                 <div className='gallery-images'>
                     <div className="gallery-image">
@@ -70,6 +81,9 @@ function Memories_of_Childhood() {
                         </div>
                         <div className="g-image">
                             <img src="/image/images2/moc/m7.jpg" alt="Image 1" style={{ width: '100%' }} />
+                        </div>
+                        <div className="g-image">
+                            <img src="/image/images2/moc/m8.jpg" alt="Image 1" style={{ width: '100%' }} />
                         </div>
                         
 

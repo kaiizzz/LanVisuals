@@ -47,60 +47,42 @@ function Reflections_on_Dreams() {
                     <Link to="/Gallery" style={{textDecoration : "none", color : 'white'}}>← Back to Gallery</Link>
                 </button>
                 <h1>Reflections on Dreams</h1>
+                <p className='intro'>
+                    <hr/>
+                    <br/>
+                    
+                    “Reflections on Dreams” is a project I have long 
+                    wanted to express through photography. I have always vividly remembered my past dreams. In my 
+                    dreams, I would fly, I’ve encountered mountains 
+                    full of snakes, and I’ve even transformed into a 
+                    beetle. What surprises me is that when I discussed 
+                    these dreams with friends, they shared that they 
+                    had experienced similar dreamscapes. Psychologists believe that dreams serve as a gateway to the 
+                    subconscious. The illogical and fantastical stories 
+                    that unfold in dreams are said to conceal deep-
+                    seated desires, memories, thoughts, and emotions.
+                    Now, with the opportunity to immerse myself in 
+                    this creative process, I feel a sense of joy, despite 
+                    the tight timeframe. This is only the beginning. 
+                    Through this project, I aim to open a window into 
+                    the exploration of women’s dreams and the subconscious.
 
+                    
+                    <br/>
+                    <br/>
+                    <hr/>
+                </p>
                 <div className='gallery-images'>
                     <div className="gallery-image">
-                        <div className="g-image">
-                            <img src="/image/images2/rod/r1.jpg" alt="Image 1" style={{ width: '100%' }} />
-                        </div>
-                        
-                        <div className="g-image">
-                            <img src="/image/images2/rod/r2.jpg" alt="Image 1" style={{ width: '100%' }} />
-                        </div>
-                        
-                        <div className="g-image">
-                            <img src="/image/images2/rod/r3.jpg" alt="Image 1" style={{ width: '100%' }} />
-                        </div>
-                        
-                        <div className="g-image">
-                            <img src="/image/images2/rod/r4.jpg" alt="Image 1" style={{ width: '100%' }} />
-                        </div>
-                        
-                        <div className="g-image">
-                            <img src="/image/images2/rod/r5.jpg" alt="Image 1" style={{ width: '100%' }} />
-                        </div>
-                        
-                        <div className="g-image">
-                            <img src="/image/images2/rod/r6.jpg" alt="Image 1" style={{ width: '100%' }} />
-                        </div>
-                        
-                        <div className="g-image">
-                            <img src="/image/images2/rod/r7.jpg" alt="Image 1" style={{ width: '100%' }} />
-                        </div>
-
-                        <div className="g-image">
-                            <img src="/image/images2/rod/r8.jpg" alt="Image 1" style={{ width: '100%' }} />
-                        </div>
-
-                        <div className="g-image">
-                            <img src="/image/images2/rod/r9.jpg" alt="Image 1" style={{ width: '100%' }} />
-                        </div>
-                        <div className="g-image">
-                            <img src="/image/images2/rod/r10.jpg" alt="Image 1" style={{ width: '100%' }} />
-                        </div>
-                        <div className="g-image">
-                            <img src="/image/images2/rod/r11.jpg" alt="Image 1" style={{ width: '100%' }} />
-                        </div>
-                        <div className="g-image">
-                            <img src="/image/images2/rod/r12.jpg" alt="Image 1" style={{ width: '100%' }} />
-                        </div>
-                        <div className="g-image">
-                            <img src="/image/images2/rod/r13.jpg" alt="Image 1" style={{ width: '100%' }} />
-                        </div>
-                        <div className="g-image">
-                            <img src="/image/images2/rod/r14.jpg" alt="Image 1" style={{ width: '100%' }} />
-                        </div>
-
+                        {Array.from({ length: 14 }, (_, i) => (
+                            <div className="g-image" key={i}>
+                                <img
+                                    src={`/image/images2/rod/ro${i + 1}.jpg`}
+                                    alt={`Image ${i + 1}`}
+                                    style={{ width: '100%' }}
+                                />
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>

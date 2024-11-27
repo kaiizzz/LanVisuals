@@ -59,6 +59,15 @@ function Vogue_Entries() {
                         <div className="g-image">
                             <img src="/image/images2/v3.jpg" alt="Image 1" style={{ width: '100%' }} />
                         </div>
+                        <div className="g-image">
+                            <img src="/image/images2/v4.jpg" alt="Image 1" style={{ width: '100%' }} />
+                        </div>
+                        <div className="g-image">
+                            <img src="/image/images2/v5.jpg" alt="Image 1" style={{ width: '100%' }} />
+                        </div>
+                        <div className="g-image">
+                            <img src="/image/images2/v6.jpg" alt="Image 1" style={{ width: '100%' }} />
+                        </div>
 
                     </div>
                 </div>

@@ -248,3 +248,11 @@
     border-radius: 10px;
     padding: 20px;
 }
+
+.intro {
+    padding-left:15%;
+    padding-right: 15%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1rem;
+}

@@ -43,6 +43,8 @@ function Gallery() {
         { src: '/image/images2/g8.jpg', alt: 'Image 11' },
         { src: '/image/images2/g9.jpg', alt: 'Image 12' },
         { src: '/image/images2/g10.jpg', alt: 'Image 13' },
+        { src: '/image/images2/g11.jpg', alt: 'Image 14' },
+        { src: '/image/images2/g12.jpg', alt: 'Image 15' },
     ];
 
     // Handlers to navigate between slides and reset the timer
