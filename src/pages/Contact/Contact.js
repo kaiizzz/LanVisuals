@@ -54,25 +54,25 @@ function Contact() {
                 <div className="contact-apps">
                     <div className="contact-app">
                         <a href="https://www.instagram.com/ellenyao2009">
-                            <img src="/image/instagram.svg" alt="Instagram" width={'20%'}/>
+                            <img src="/image/instagram.svg" alt="Instagram" width={'50px'}/>
                         </a>
                     </div>
 
                     <div className="contact-app">
                         <a href="mailto: ellenyao2009@hotmail.com">
-                            <img src="/image/email-outline.svg" alt="Instagram" width={'20%'}/>
+                            <img src="/image/email-outline.svg" alt="Instagram" width={'50px'}/>
                         </a>
                     </div>
 
                     <div className="contact-app">
                         
-                            <img src="/image/linkedin-original.svg" alt="Instagram" width={'20%'}/>
+                            <img src="/image/linkedin-original.svg" alt="Instagram" width={'50px'}/>
                         
                     </div>
 
                     <div className="contact-app">
                         
-                            <img src="/image/pinterest.svg" alt="Instagram" width={'20%'}/>
+                            <img src="/image/pinterest.svg" alt="Instagram" width={'50px'}/>
                         
                     </div>
                 </div>

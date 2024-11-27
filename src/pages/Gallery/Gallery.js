@@ -1,11 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Gallery.css';
 import { useUser } from '../../UserContext';
 
 function Gallery() {
-    const { user } = useUser(); 
+    const { user } = useUser();
     const [isVisible, setIsVisible] = useState(false);
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    // UseRef to keep track of the interval
+    const slideInterval = useRef(null);
 
     // Show/Hide back-to-top button based on scroll position
     const toggleVisibility = () => {
@@ -24,6 +28,44 @@ function Gallery() {
         });
     };
 
+    // Array of images
+    const images = [
+        { src: '/image/images2/v1.jpg', alt: 'Image 1' },
+        { src: '/image/images2/v2.jpg', alt: 'Image 2' },
+        { src: '/image/images2/v3.jpg', alt: 'Image 3' },
+        { src: '/image/images2/g1.jpg', alt: 'Image 4' },
+        { src: '/image/images2/g2.jpg', alt: 'Image 5' },
+        { src: '/image/images2/g3.jpg', alt: 'Image 6' },
+        { src: '/image/images2/g4.jpg', alt: 'Image 7' },
+        { src: '/image/images2/g5.jpg', alt: 'Image 8' },
+        { src: '/image/images2/g6.jpg', alt: 'Image 9' },
+        { src: '/image/images2/g7.jpg', alt: 'Image 10' },
+        { src: '/image/images2/g8.jpg', alt: 'Image 11' },
+        { src: '/image/images2/g9.jpg', alt: 'Image 12' },
+        { src: '/image/images2/g10.jpg', alt: 'Image 13' },
+    ];
+
+    // Handlers to navigate between slides and reset the timer
+    const nextSlide = () => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+        resetSlideInterval();
+    };
+
+    const prevSlide = () => {
+        setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+        resetSlideInterval();
+    };
+
+    // Function to reset the interval
+    const resetSlideInterval = () => {
+        if (slideInterval.current) {
+            clearInterval(slideInterval.current);
+        }
+        slideInterval.current = setInterval(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+        }, 5000);
+    };
+
     useEffect(() => {
         // Disable horizontal scrolling
         document.body.style.overflowX = 'hidden';
@@ -31,36 +73,19 @@ function Gallery() {
         // Attach the scroll event listener
         window.addEventListener('scroll', toggleVisibility);
 
-        // Cleanup the event listener on component unmount
+        // Initialize the interval for automatic slideshow
+        slideInterval.current = setInterval(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+        }, 5000);
+
+        // Cleanup the event listener and interval on component unmount
         return () => {
             window.removeEventListener('scroll', toggleVisibility);
+            if (slideInterval.current) {
+                clearInterval(slideInterval.current);
+            }
         };
     }, []);
-
-    // Array of images
-    const images = [
-        { src: '/image/images2/v1.jpg', alt: 'Image 1' },
-        { src: '/image/images2/v2.jpg', alt: 'Image 2' },
-        { src: '/image/images2/v3.jpg', alt: 'Image 3' },
-    ];
-
-    // State to track the current slide index
-    const [currentIndex, setCurrentIndex] = useState(0);
-
-    // Handlers to navigate between slides
-    const nextSlide = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    };
-
-    const prevSlide = () => {
-        setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-    };
-
-    // // Automatically transition to the next slide
-    // useEffect(() => {
-    //     const interval = setInterval(nextSlide, 10000); // Change slide every 5 seconds
-    //     return () => clearInterval(interval); // Cleanup interval on component unmount
-    // }, []);
 
     return (
         <div className="gallery-container">
@@ -73,7 +98,7 @@ function Gallery() {
                         maxWidth: '500px',
                         margin: 'auto',
                         overflow: 'hidden',
-                        height: '600px', // Set a consistent height for the slideshow
+                        height: '650px', // Set a consistent height for the slideshow
                     }}
                 >
                     <div className="slideshow-container" style={{ height: '100%'}}>
@@ -146,7 +171,7 @@ function Gallery() {
                         {images.map((_, index) => (
                             <span
                                 key={index}
-                                onClick={() => setCurrentIndex(index)}
+                                onClick={() => {setCurrentIndex(index); resetSlideInterval();}}
                                 style={{
                                     height: '15px',
                                     width: '15px',
@@ -160,27 +185,26 @@ function Gallery() {
                         ))}
                     </div>
                 </div>
-                <hr className='line'/>
                 <div className="gallery-projects">
                 
                     <h2>Projects</h2>
                     
 
                     <div className="gallery-project">
-                        <Link to="/Gallery/Vogue_Entries" className="project-link" onClick={scrollToTop}>
+                        <Link to="/Gallery/Vogue_Entries" className="project-link" onClick={scrollToTop} style={{textDecoration : "none"}}>
                             <div className="project-image1">
                                 {/* <img src="/image/images2/v1.jpg" alt="Project 1" style={{ width: '100%' }} /> */}
                                 <div className = "image-overlay"><p className = "text">Vogue Entries</p></div>
                                
                             </div>
                         </Link>
-                        <Link to="/Gallery/Memories_of_Childhood" className="project-link" onClick={scrollToTop}>
+                        <Link to="/Gallery/Memories_of_Childhood" className="project-link" onClick={scrollToTop} style={{textDecoration : "none"}}>
                             <div className="project-image2">
                                 {/* <img src="/image/images2/v1.jpg" alt="Project 2" style={{ width: '100%' }} /> */}
                                 <div className = "image-overlay"><p className = "text">Memories of Childhood</p></div>
                             </div>
                         </Link>
-                        <Link to="/Gallery/Reflections_on_Dreams" className="project-link" onClick={scrollToTop}>
+                        <Link to="/Gallery/Reflections_on_Dreams" className="project-link" onClick={scrollToTop} style={{textDecoration : "none"}}>
                             <div className="project-image3">
                                 {/* <img src="/image/images2/v1.jpg" alt="Project 3" style={{ width: '100%' }} /> */}
                                 <div className = "image-overlay">

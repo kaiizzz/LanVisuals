@@ -25,7 +25,7 @@
 }
 
 .about-text {
-    font-size: 1rem; /* Consistent font sizing */
+    font-size: 0.8rem; /* Consistent font sizing */
     color: white;
     padding: 2%; /* Adjust for better spacing */
     line-height: 1.5; /* Improve readability */

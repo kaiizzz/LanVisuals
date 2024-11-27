@@ -1,6 +1,7 @@
 .main-content {
     /* background-color: #bdb9c0; */
-    height: 100vh;
+    min-height: 100vh;
+    height:auto;
     width: 100vw;
     justify-content: center;
     align-items: center;
@@ -84,10 +85,12 @@
     /* margin-top: 10%; */
     width: 100%; /* Ensure the container spans the full width */
     height: 5vh;
-    padding: 1%;
+    padding: 10px;
     border-radius: 5px;
     font-size: 150%;
-    margin-top: 3%;
+    margin-top: 250px;
+    background-color: rgba(59, 59, 59, 0.815);
+
 
 
 /* ?hello */
@@ -111,7 +114,6 @@
     margin-left: 5%;
     margin-right: 5%;
     width: 30%;
-    background-color: #00000048;
     
     
 }

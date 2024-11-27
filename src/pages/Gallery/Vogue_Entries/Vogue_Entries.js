@@ -43,8 +43,8 @@ function Vogue_Entries() {
     return (
         <div className="gallery-container">
             <div className="gallery-content">
-                <button className="back-button" onClick={scrollToTop}>
-                    <Link to="/Gallery">← Back to Gallery</Link>
+                <button className="back-button" onClick={scrollToTop} style={{textDecoration : "none"}}>
+                    <Link to="/Gallery" style={{textDecoration : "none", color : 'white'}}>← Back to Gallery</Link>
                 </button>
                 <h1>Vogue Entries</h1>
 

@@ -7,18 +7,6 @@ function About() {
     const { user } = useUser(); 
     const [isVisible, setIsVisible] = useState(false);
 
-    useEffect(() => {
-        // Disable scrolling when the Home page is mounted
-        document.body.style.overflow = 'hidden';
-        
-    
-        // Re-enable scrolling when the Home page is unmounted
-        return () => {
-          document.body.style.overflow = 'auto';
-          
-        };
-      }, []);
-
     return (
         <div className="about-bg">
             <div className="about-container">
