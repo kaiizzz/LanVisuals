@@ -7,6 +7,10 @@ import Contact from './pages/Contact/Contact';
 import Gallery from './pages/Gallery/Gallery';
 import About from './pages/About/About';
 import Home from './pages/Home/Home';
+import Vogue_Entries from './pages/Gallery/Vogue_Entries/Vogue_Entries';
+import Memories_of_Childhood from './pages/Gallery/Memories_of_Childhood/Memories_of_Childhood';
+import Reflections_on_Dreams from './pages/Gallery/Reflections_on_Dreams/Reflections_on_Dreams';
+
 
 
 // Function to generate a random hash string
@@ -73,10 +77,13 @@ function MainContent({ adminHash }) {
       <>
           {showHeader && <Header adminHash={adminHash} />}  {/* Pass adminHash to Header */}
           <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/Gallery" element={<Gallery />} />
-              <Route path="/Contact" element={<Contact />} />
-              <Route path="/About" element={<About />} />
+                <Route path="/" element={<Home />} />
+                <Route path="/Gallery" element={<Gallery />} />
+                <Route path="/Contact" element={<Contact />} />
+                <Route path="/About" element={<About />} />
+                <Route path="/Gallery/Vogue_Entries" element={<Vogue_Entries />} />
+                <Route path="/Gallery/Memories_of_Childhood" element={<Memories_of_Childhood />} />
+                <Route path="/Gallery/Reflections_on_Dreams" element={<Reflections_on_Dreams />} />
           </Routes>
       </>
   );

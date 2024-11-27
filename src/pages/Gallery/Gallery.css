@@ -8,6 +8,7 @@
     width: 100%; /* Full width */
     background-color: rgb(0, 0, 0);
     padding: 2%; /* Adjusted padding */
+    margin-top: 50px;
     box-sizing: border-box; /* Include padding in dimensions */
 }
 
@@ -83,3 +84,129 @@
         font-size: 1.2rem; /* Adjust font size */
     }
 }
+
+.gallery-projects {
+    display: flex;
+    flex-direction: row; /* Place projects in a row by default */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    justify-content: center; /* Center projects horizontally */
+    gap: 20px; /* Add spacing between projects */
+    width: 100%; /* Full container width */
+    padding: 20px; /* Add padding around the container */
+    box-sizing: border-box; /* Include padding in dimensions */
+    
+}
+
+.gallery-project {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    justify-content: center; /* Center projects horizontally */
+    width: 100%; /* Full width for each project */
+    background-color: #6acad7f1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    text-decoration: none !important;
+    
+}
+
+.image-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    
+    color: white;
+    font-size: 1.5rem; /* Scalable font size */
+    text-align: center;
+    border-radius: 10px;
+}
+
+.image-overlay:hover {
+    color: #8cf7ff; /* Optional hover effect for text */
+}
+
+@media (max-width: 768px) {
+    .gallery-project {
+        flex: 1 1 100%; /* Full width for smaller screens */
+        max-width: 100%;
+    }
+
+    .gallery-projects {
+        gap: 10px; /* Reduce gap between projects on smaller screens */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .project-image1 {
+        height: 200px; /* Reduce image height for smaller screens */
+    }
+
+    .project-image2 {
+        height: 200px; /* Reduce image height for smaller screens */
+    }
+
+    .project-image3 {
+        height: 200px; /* Reduce image height for smaller screens */
+    }
+}
+.project-image1 {
+    background-image: url('v1.jpg');
+    background-color: #00000075;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    border-radius: 10px;
+    text-decoration: none !important;
+    margin: 10px 10px 10px 10px;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+
+.project-image1:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+
+.project-image2 {
+    background-image: url('m1.jpg');
+    background-repeat: no-repeat;
+    background-color: #00000075;
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    border-radius: 10px;
+    text-decoration: none !important;
+    margin: 10px 10px 10px 10px;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+
+.project-image2:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.project-image3 {
+    background-image: url('r3.jpg');
+    background-color: #00000075;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    border-radius: 10px;
+    text-decoration: none !important;
+    margin: 10px 10px 10px 10px;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+
+
+.project-image3:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+} 
+
+.line {margin-top: 100px;}
+

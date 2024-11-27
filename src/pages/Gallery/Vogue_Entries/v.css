@@ -1,0 +1,97 @@
+.gallery-container {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Myriad Pro', sans-serif;
+    width: 100%; /* Full width */
+    background-color: rgb(0, 0, 0);
+    padding: 5%; /* Adjusted padding */
+    margin-top: 80px;
+    box-sizing: border-box; /* Include padding in dimensions */
+}
+
+.gallery-content {
+    color: white;
+    font-family: 'Myriad Pro', sans-serif;
+    font-size: 2rem; /* Scalable font size */
+    text-align: center; /* Center-align text */
+    margin-bottom: 2%; /* Add spacing below */
+    padding: 3%; /* Adjusted padding */
+    width: 100%; /* Ensure it takes full width */
+}
+
+.gallery-image {
+    padding: 3%; /* Consistent padding */
+    display: flex; /* Allows for flexible grid layout */
+    flex-wrap: wrap; /* Wrap images on smaller screens */
+    justify-content: center; /* Center-align images */
+    gap: 20px; /* Add spacing between images */
+}
+
+.g-image {
+    margin-top: 5%; /* Spacing above individual images */
+    width: 100%; /* Ensure images adapt to their container */
+    max-width: 500px; /* Limit image size */
+    height: auto; /* Maintain aspect ratio */
+    box-sizing: border-box; /* Include padding in dimensions */
+    border-radius: 10px; /* Add rounded corners for a sleek look */
+    overflow: hidden;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 3%;
+    right: 3%;
+    background: #6ACAD7;
+    color: white;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 1.5rem; /* Scalable font size */
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.back-to-top:hover {
+    background: #0056b3; /* Darker hover effect */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+@media (max-width: 768px) {
+    .gallery-content {
+        font-size: 1.5rem; /* Reduce text size for smaller screens */
+        padding: 2%; /* Reduce padding */
+    }
+
+    .gallery-image {
+        gap: 10px; /* Smaller gap between images */
+    }
+
+    .g-image {
+        max-width: 100%; /* Allow images to fill container */
+        margin-top: 3%; /* Reduce margin */
+    }
+
+    .back-to-top {
+        width: 40px; /* Smaller button */
+        height: 40px;
+        line-height: 40px;
+        font-size: 1.2rem; /* Adjust font size */
+    }
+}
+
+
+.back-button {
+    text-decoration: none!important;
+    text-align: center;
+    background-color: #6ACAD7;
+    
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+}

@@ -81,13 +81,13 @@
     display: flex; /* Display the pairs in a row */
     justify-content: center; /* Place pairs on opposite sides */
     align-items: center; /* Center items vertically */
-    margin-top: 5%;
+    /* margin-top: 10%; */
     width: 100%; /* Ensure the container spans the full width */
     height: 5vh;
-    background-color: rgba(114, 114, 114, 0.815);
     padding: 1%;
     border-radius: 5px;
     font-size: 150%;
+    margin-top: 3%;
 
 
 /* ?hello */
@@ -110,7 +110,8 @@
     border: 2px solid transparent;
     margin-left: 5%;
     margin-right: 5%;
-    width: 50%;
+    width: 30%;
+    background-color: #00000048;
     
     
 }

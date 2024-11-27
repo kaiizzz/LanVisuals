@@ -65,15 +65,15 @@ function Contact() {
                     </div>
 
                     <div className="contact-app">
-                        <a href="https://www.linkedin.com">
+                        
                             <img src="/image/linkedin-original.svg" alt="Instagram" width={'20%'}/>
-                        </a>
+                        
                     </div>
 
                     <div className="contact-app">
-                        <a href="https://www.pintrest.com">
+                        
                             <img src="/image/pinterest.svg" alt="Instagram" width={'20%'}/>
-                        </a>
+                        
                     </div>
                 </div>
 

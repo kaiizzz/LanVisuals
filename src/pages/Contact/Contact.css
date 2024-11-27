@@ -11,6 +11,7 @@
     background-color: #3f7a81;
     font-size: 1.5rem; /* Use rem for scalable font size */
     box-sizing: border-box; /* Include padding in dimensions */
+    margin-top: 80px;
 }
 
 .contact-text {

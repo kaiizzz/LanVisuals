@@ -41,7 +41,7 @@
     z-index: 10;
     color: rgb(255, 255, 255);
     background-color: transparent; /* Base color for hover effect */
-    border: 2px solid white; /* Add border for visual clarity */
+    /* border: 2px solid white; Add border for visual clarity */
     padding: 10px 20px; /* Adjust for better clickability */
     margin: 0 15px; /* Spacing between buttons */
     text-align: center;
