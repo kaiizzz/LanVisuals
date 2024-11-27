@@ -43,9 +43,8 @@ function Reflections_on_Dreams() {
     return (
         <div className="gallery-container">
             <div className="gallery-content">
-                <button className="back-button" onClick={scrollToTop && goToGallery}>
-                    ← Back to Gallery
-                    <Link to="/Gallery"></Link>
+                <button className="back-button" onClick={scrollToTop}>
+                    <Link to="/Gallery">← Back to Gallery</Link>
                 </button>
                 <h1>Reflections on Dreams</h1>
 
